@@ -1,0 +1,10 @@
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\Animal.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\Animal.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\animales.view.AnimalUI.resources
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\animales.view.FoodUI.resources
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\animales.view.InicioView.resources
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\Animal.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\Animal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\Animal.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\Animal.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\Animal\Animal\obj\Debug\net7.0-windows\Animal.csproj.CoreCompileInputs.cache
