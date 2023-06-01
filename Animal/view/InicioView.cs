@@ -19,9 +19,17 @@ namespace animales.view
 
         private void btnAlimentos_Click(object sender, EventArgs e)
         {
+            Hide();
             FoodUI foodUI = new FoodUI();
-            foodUI.ShowDialog();
+            foodUI.Show();
 
+        }
+
+        private void btnAnimales_Click(object sender, EventArgs e)
+        {
+            Hide();
+            AnimalUI animalUI = new AnimalUI();
+            animalUI.Show();
         }
     }
 }

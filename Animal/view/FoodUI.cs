@@ -2,73 +2,62 @@
 using animales.interfaces;
 using animales.model;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace animales.view
 {
     public partial class FoodUI : Form
     {
         IController FoodControl = FoodController.GetController();
+        List<string> listTipoAlimento = new List<string> { "Vegetal", "Animal" };
+
 
         public FoodUI()
         {
             InitializeComponent();
-            cmbTipoAlim.Items.Add("Vegetal");
-            cmbTipoAlim.Items.Add("Animal");
+            cargarComboBox(cmbTipoAlim, listTipoAlimento);
+
         }
 
 
-        private void CreateAlimento()
+        public void CreateFood()
         {
             switch (cmbTipoAlim.SelectedItem.ToString())
             {
-
                 case "Vegetal":
-
-                    if (((FoodController)FoodControl).ValidarCadena(txtNombre.Text) && ((FoodController)FoodControl).ValidarNumero(txtCalorias.Text))
-                    {
-
-                    }
-                    food = new PlantFood(txtNombre.Text, Convert.ToInt32(txtCalorias.Text));
-                    Console.WriteLine(food.ToString());
+                    ((FoodController)FoodControl).CreateFoodVegetal(txtNombre.Text, Convert.ToInt32(txtCalorias.Text));
                     break;
 
                 case "Animal":
-                    food = new AnimalFood(txtNombre.Text, Convert.ToInt32(txtCalorias.Text));
-                    Console.WriteLine(food.ToString());
+                    ((FoodController)FoodControl).CreateFoodAnimal(txtNombre.Text, Convert.ToInt32(txtCalorias.Text));
                     break;
             }
         }
 
-
-
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            CreateAlimento();
+            CreateFood();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
             InicioView inicioView = new InicioView();
             inicioView.Show();
-
         }
 
-        private void txtNombre_Validating(object sender, CancelEventArgs e)
+        public void cargarComboBox(ComboBox cmb, List<string> listTipoAlimento)
         {
-            if (txtNombre.Text == "")
+            foreach (var e in listTipoAlimento)
             {
-                ErrorProvider.SetError(txtNombre, "Debe introducir el nombre");
+                cmb.Items.Add(e);
             }
         }
+
     }
 }

@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -28,135 +28,215 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblAnimal = new System.Windows.Forms.Label();
-            this.btnCrear = new System.Windows.Forms.Button();
-            this.cmbAlimentacion = new System.Windows.Forms.ComboBox();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblAlimentacion = new System.Windows.Forms.Label();
-            this.lblEdad = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblPeso = new System.Windows.Forms.Label();
-            this.txtPeso = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            lblAnimal = new Label();
+            btnCrear = new Button();
+            cmbDiet = new ComboBox();
+            txtNombre = new TextBox();
+            lblAlimentacion = new Label();
+            lblEdad = new Label();
+            lblNombre = new Label();
+            lblPeso = new Label();
+            splitter1 = new Splitter();
+            pnlFormAnimal = new Panel();
+            numUpDnPeso = new NumericUpDown();
+            numUpEdad = new NumericUpDown();
+            cmbTipoAnimal = new ComboBox();
+            lblTipoAnimal = new Label();
+            errorProvider1 = new ErrorProvider(components);
+            btnVolver = new Button();
+            pnlFormAnimal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numUpDnPeso).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numUpEdad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            SuspendLayout();
             // 
             // lblAnimal
             // 
-            this.lblAnimal.AutoSize = true;
-            this.lblAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnimal.Location = new System.Drawing.Point(107, 45);
-            this.lblAnimal.Name = "lblAnimal";
-            this.lblAnimal.Size = new System.Drawing.Size(261, 40);
-            this.lblAnimal.TabIndex = 0;
-            this.lblAnimal.Text = "Crear animales";
+            lblAnimal.AutoSize = true;
+            lblAnimal.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAnimal.Location = new Point(155, 29);
+            lblAnimal.Name = "lblAnimal";
+            lblAnimal.Size = new Size(261, 40);
+            lblAnimal.TabIndex = 0;
+            lblAnimal.Text = "Crear animales";
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(118, 344);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(214, 46);
-            this.btnCrear.TabIndex = 14;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            btnCrear.Location = new Point(82, 321);
+            btnCrear.Margin = new Padding(3, 4, 3, 4);
+            btnCrear.Name = "btnCrear";
+            btnCrear.Size = new Size(211, 58);
+            btnCrear.TabIndex = 14;
+            btnCrear.Text = "Crear";
+            btnCrear.UseVisualStyleBackColor = true;
+            btnCrear.Click += btnCrear_Click;
             // 
-            // cmbAlimentacion
+            // cmbDiet
             // 
-            this.cmbAlimentacion.FormattingEnabled = true;
-            this.cmbAlimentacion.Location = new System.Drawing.Point(193, 301);
-            this.cmbAlimentacion.Name = "cmbAlimentacion";
-            this.cmbAlimentacion.Size = new System.Drawing.Size(175, 28);
-            this.cmbAlimentacion.TabIndex = 13;
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Location = new System.Drawing.Point(168, 188);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(202, 26);
-            this.txtEdad.TabIndex = 12;
+            cmbDiet.FormattingEnabled = true;
+            cmbDiet.Location = new Point(138, 204);
+            cmbDiet.Margin = new Padding(3, 4, 3, 4);
+            cmbDiet.Name = "cmbDiet";
+            cmbDiet.Size = new Size(194, 33);
+            cmbDiet.TabIndex = 13;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(168, 118);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(202, 26);
-            this.txtNombre.TabIndex = 11;
+            txtNombre.Location = new Point(129, 12);
+            txtNombre.Margin = new Padding(3, 4, 3, 4);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(224, 31);
+            txtNombre.TabIndex = 11;
             // 
             // lblAlimentacion
             // 
-            this.lblAlimentacion.AutoSize = true;
-            this.lblAlimentacion.Location = new System.Drawing.Point(55, 301);
-            this.lblAlimentacion.Name = "lblAlimentacion";
-            this.lblAlimentacion.Size = new System.Drawing.Size(112, 20);
-            this.lblAlimentacion.TabIndex = 10;
-            this.lblAlimentacion.Text = "Alimentacion:  ";
+            lblAlimentacion.AutoSize = true;
+            lblAlimentacion.Location = new Point(5, 207);
+            lblAlimentacion.Name = "lblAlimentacion";
+            lblAlimentacion.Size = new Size(129, 25);
+            lblAlimentacion.TabIndex = 10;
+            lblAlimentacion.Text = "Alimentacion:  ";
             // 
             // lblEdad
             // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(55, 194);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(55, 20);
-            this.lblEdad.TabIndex = 9;
-            this.lblEdad.Text = "Edad: ";
+            lblEdad.AutoSize = true;
+            lblEdad.Location = new Point(5, 84);
+            lblEdad.Name = "lblEdad";
+            lblEdad.Size = new Size(61, 25);
+            lblEdad.TabIndex = 9;
+            lblEdad.Text = "Edad: ";
             // 
             // lblNombre
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(55, 124);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(73, 20);
-            this.lblNombre.TabIndex = 8;
-            this.lblNombre.Text = "Nombre: ";
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new Point(3, 19);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(87, 25);
+            lblNombre.TabIndex = 8;
+            lblNombre.Text = "Nombre: ";
             // 
             // lblPeso
             // 
-            this.lblPeso.AutoSize = true;
-            this.lblPeso.Location = new System.Drawing.Point(57, 243);
-            this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(53, 20);
-            this.lblPeso.TabIndex = 15;
-            this.lblPeso.Text = "Peso: ";
+            lblPeso.AutoSize = true;
+            lblPeso.Location = new Point(5, 145);
+            lblPeso.Name = "lblPeso";
+            lblPeso.Size = new Size(58, 25);
+            lblPeso.TabIndex = 15;
+            lblPeso.Text = "Peso: ";
             // 
-            // txtPeso
+            // splitter1
             // 
-            this.txtPeso.Location = new System.Drawing.Point(159, 243);
-            this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(100, 26);
-            this.txtPeso.TabIndex = 16;
+            splitter1.Location = new Point(0, 0);
+            splitter1.Name = "splitter1";
+            splitter1.Size = new Size(4, 558);
+            splitter1.TabIndex = 17;
+            splitter1.TabStop = false;
+            // 
+            // pnlFormAnimal
+            // 
+            pnlFormAnimal.Controls.Add(numUpDnPeso);
+            pnlFormAnimal.Controls.Add(numUpEdad);
+            pnlFormAnimal.Controls.Add(lblNombre);
+            pnlFormAnimal.Controls.Add(lblEdad);
+            pnlFormAnimal.Controls.Add(lblAlimentacion);
+            pnlFormAnimal.Controls.Add(txtNombre);
+            pnlFormAnimal.Controls.Add(lblPeso);
+            pnlFormAnimal.Controls.Add(cmbDiet);
+            pnlFormAnimal.Controls.Add(btnCrear);
+            pnlFormAnimal.Location = new Point(84, 150);
+            pnlFormAnimal.Name = "pnlFormAnimal";
+            pnlFormAnimal.Size = new Size(382, 395);
+            pnlFormAnimal.TabIndex = 19;
+            // 
+            // numUpDnPeso
+            // 
+            numUpDnPeso.Location = new Point(129, 139);
+            numUpDnPeso.Name = "numUpDnPeso";
+            numUpDnPeso.Size = new Size(111, 31);
+            numUpDnPeso.TabIndex = 20;
+            // 
+            // numUpEdad
+            // 
+            numUpEdad.Location = new Point(129, 78);
+            numUpEdad.Name = "numUpEdad";
+            numUpEdad.Size = new Size(111, 31);
+            numUpEdad.TabIndex = 19;
+            // 
+            // cmbTipoAnimal
+            // 
+            cmbTipoAnimal.FormattingEnabled = true;
+            cmbTipoAnimal.Location = new Point(336, 99);
+            cmbTipoAnimal.Name = "cmbTipoAnimal";
+            cmbTipoAnimal.Size = new Size(182, 33);
+            cmbTipoAnimal.TabIndex = 20;
+            cmbTipoAnimal.SelectedValueChanged += cmbTipoAnimal_SelectedValueChanged;
+            // 
+            // lblTipoAnimal
+            // 
+            lblTipoAnimal.AutoSize = true;
+            lblTipoAnimal.Location = new Point(31, 102);
+            lblTipoAnimal.Name = "lblTipoAnimal";
+            lblTipoAnimal.Size = new Size(299, 25);
+            lblTipoAnimal.TabIndex = 21;
+            lblTipoAnimal.Text = "Elija que tipo de animal desea crear: ";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // btnVolver
+            // 
+            btnVolver.Location = new Point(471, 13);
+            btnVolver.Margin = new Padding(3, 4, 3, 4);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(83, 36);
+            btnVolver.TabIndex = 22;
+            btnVolver.Text = "volver";
+            btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
             // 
             // AnimalUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 446);
-            this.Controls.Add(this.txtPeso);
-            this.Controls.Add(this.lblPeso);
-            this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.cmbAlimentacion);
-            this.Controls.Add(this.txtEdad);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblAlimentacion);
-            this.Controls.Add(this.lblEdad);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblAnimal);
-            this.Name = "AnimalUI";
-            this.Text = "AnimalUI";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(566, 558);
+            Controls.Add(btnVolver);
+            Controls.Add(lblTipoAnimal);
+            Controls.Add(cmbTipoAnimal);
+            Controls.Add(pnlFormAnimal);
+            Controls.Add(splitter1);
+            Controls.Add(lblAnimal);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "AnimalUI";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "AnimalUI";
+            pnlFormAnimal.ResumeLayout(false);
+            pnlFormAnimal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numUpDnPeso).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numUpEdad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblAnimal;
-        private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.ComboBox cmbAlimentacion;
-        private System.Windows.Forms.TextBox txtEdad;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label lblAlimentacion;
-        private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblPeso;
-        private System.Windows.Forms.TextBox txtPeso;
+        private Label lblAnimal;
+        private Button btnCrear;
+        private ComboBox cmbDiet;
+        private TextBox txtNombre;
+        private Label lblAlimentacion;
+        private Label lblEdad;
+        private Label lblNombre;
+        private Label lblPeso;
+        private Splitter splitter1;
+        private Panel pnlFormAnimal;
+        private NumericUpDown numUpEdad;
+        private ComboBox cmbTipoAnimal;
+        private Label lblTipoAnimal;
+        private ErrorProvider errorProvider1;
+        private NumericUpDown numUpDnPeso;
+        private Button btnVolver;
     }
 }

@@ -24,7 +24,7 @@ namespace animales.model.diet
 
         public override string ToString()
         {
-            return $"Id:{id}, alimentacion:hervivoro ";
+            return $"Dieta: Hervivoro ";
         }
     }
 }

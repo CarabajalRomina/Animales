@@ -10,10 +10,6 @@ namespace animales.interfaces
     {
         void Sleep();
         void Feed(IFood food);
-        string GetSpecie();
-        float GetWeight();
-        int GetAge();
-        IDiet GetDiet();
         bool Move(int x, int y);
     }
 }

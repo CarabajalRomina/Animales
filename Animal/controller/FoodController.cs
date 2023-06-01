@@ -20,17 +20,19 @@ namespace animales.controller
             return FoodContr;
         }
 
-        public void CreateFood(string name, string calories)
+        public IFood CreateFoodAnimal(string name, int calories)
         {
-
+            return new AnimalFood(name,calories);
         }
 
- 
+        public IFood CreateFoodVegetal(string name, int calories)
+        {
+            return new PlantFood(name, calories);
+        }
 
         public bool ValidarNumero(string num)
         {
             return Regex.IsMatch(num, @"^[0-1,]+$");
         }
-
     }
 }

@@ -25,7 +25,7 @@ namespace animales.model
 
         public override string ToString()
         {
-            return $"Id:{id}, alimentacion:Omnivoro ";
+            return $"Dieta: Omnivoro ";
         }
     }
 }

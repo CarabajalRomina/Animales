@@ -9,47 +9,32 @@ namespace animales.model.tipoAnimal
 {
     internal class Terrestrial : Animal
     {
-        int id { get; }
-        private static int globalCount;
-        int maxEnergy = 100;
-        public Terrestrial(string nameSpecie, float weigth, int age, IDiet diet) : base(nameSpecie, weigth, age, diet)
-        {
-            this.id = ++globalCount;
-        }
+        int Id { get; }
+        static int globalCount;
+        readonly int MaxEnergy = 100;
 
-   
+
+        public Terrestrial(string   nameSpecie, decimal weigth, int age, IDiet diet) : base(nameSpecie, weigth, age, diet)
+        {
+            Id = ++globalCount;
+            NameSpecie = nameSpecie;
+            Weight = weigth;
+            Age = age;
+            Diet = diet;
+            Energy = MaxEnergy;
+        }
 
         public override void Feed(IFood food)
         {
-            if (diet.CanEat(food))
+            if (Diet.CanEat(food))
             {
                 UpdateEnergy(food.GetCalories());
-                Console.WriteLine("mm que ricoo" + $"{diet}");
+                Console.WriteLine("mm que ricoo" + $"{Diet}");
             }
             else
             {
-                Console.WriteLine("No puedo comer eso soy " + $"{diet}");
+                Console.WriteLine("No puedo comer eso soy " + $"{Diet}");
             }
-        }
-
-        public override int GetAge()
-        {
-            return age;
-        }
-
-        public override IDiet GetDiet()
-        {
-            return diet;
-        }
-
-        public override string GetSpecie()
-        {
-            return nameSpecie;
-        }
-
-        public override float GetWeight()
-        {
-            return weight;
         }
 
         public override bool Move(int x, int y)
@@ -59,21 +44,21 @@ namespace animales.model.tipoAnimal
 
         public override void Sleep()
         {
-            UpdateEnergy(maxEnergy / 2);
+            UpdateEnergy(MaxEnergy / 2);
         }
 
         private void UpdateEnergy(int energy)
         {
-            if (energy + this.energy > maxEnergy)
+            if (energy + Energy > MaxEnergy)
             {
-                this.energy = maxEnergy;
+                Energy = MaxEnergy;
             }
-            else this.energy = +energy;
+            else Energy =+ energy;
         }
 
         public override string ToString()
         {
-            return $"Id:{id}, nombre de especie: {nameSpecie}, peso: {weight}, edad: {age}, alimentacion: {diet}  ";
+            return $"Id:{Id}, tipo de animal: Terrestre, nombre de especie: {NameSpecie}, peso: {Weight}, edad: {Age}, {Diet}  ";
         }
     }
 }

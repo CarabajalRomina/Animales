@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -28,96 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblImagen = new System.Windows.Forms.Label();
-            this.pnlBotones = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAnimales = new System.Windows.Forms.Button();
-            this.btnAlimentos = new System.Windows.Forms.Button();
-            this.pnlBotones.SuspendLayout();
-            this.SuspendLayout();
+            lblTitulo = new Label();
+            lblImagen = new Label();
+            pnlBotones = new Panel();
+            button1 = new Button();
+            btnAnimales = new Button();
+            btnAlimentos = new Button();
+            pnlBotones.SuspendLayout();
+            SuspendLayout();
             // 
             // lblTitulo
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Britannic Bold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(178, 57);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(414, 106);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Zootopia";
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Britannic Bold", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitulo.Location = new Point(198, 71);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(414, 106);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Zootopia";
             // 
             // lblImagen
             // 
-            this.lblImagen.AutoSize = true;
-            this.lblImagen.Location = new System.Drawing.Point(303, 204);
-            this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(150, 20);
-            this.lblImagen.TabIndex = 1;
-            this.lblImagen.Text = "imagen de animales";
+            lblImagen.AutoSize = true;
+            lblImagen.Location = new Point(337, 255);
+            lblImagen.Name = "lblImagen";
+            lblImagen.Size = new Size(170, 25);
+            lblImagen.TabIndex = 1;
+            lblImagen.Text = "imagen de animales";
             // 
             // pnlBotones
             // 
-            this.pnlBotones.Controls.Add(this.button1);
-            this.pnlBotones.Controls.Add(this.btnAnimales);
-            this.pnlBotones.Controls.Add(this.btnAlimentos);
-            this.pnlBotones.Location = new System.Drawing.Point(0, 321);
-            this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(800, 100);
-            this.pnlBotones.TabIndex = 2;
+            pnlBotones.Controls.Add(button1);
+            pnlBotones.Controls.Add(btnAnimales);
+            pnlBotones.Controls.Add(btnAlimentos);
+            pnlBotones.Location = new Point(0, 401);
+            pnlBotones.Margin = new Padding(3, 4, 3, 4);
+            pnlBotones.Name = "pnlBotones";
+            pnlBotones.Size = new Size(889, 125);
+            pnlBotones.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(539, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 66);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Visitar animales";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(599, 25);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(231, 82);
+            button1.TabIndex = 2;
+            button1.Text = "Visitar animales";
+            button1.UseVisualStyleBackColor = true;
             // 
             // btnAnimales
             // 
-            this.btnAnimales.Location = new System.Drawing.Point(294, 20);
-            this.btnAnimales.Name = "btnAnimales";
-            this.btnAnimales.Size = new System.Drawing.Size(219, 66);
-            this.btnAnimales.TabIndex = 1;
-            this.btnAnimales.Text = "Crear animales";
-            this.btnAnimales.UseVisualStyleBackColor = true;
+            btnAnimales.Location = new Point(327, 25);
+            btnAnimales.Margin = new Padding(3, 4, 3, 4);
+            btnAnimales.Name = "btnAnimales";
+            btnAnimales.Size = new Size(243, 82);
+            btnAnimales.TabIndex = 1;
+            btnAnimales.Text = "Crear animales";
+            btnAnimales.UseVisualStyleBackColor = true;
+            btnAnimales.Click += btnAnimales_Click;
             // 
             // btnAlimentos
             // 
-            this.btnAlimentos.Location = new System.Drawing.Point(46, 20);
-            this.btnAlimentos.Name = "btnAlimentos";
-            this.btnAlimentos.Size = new System.Drawing.Size(218, 66);
-            this.btnAlimentos.TabIndex = 0;
-            this.btnAlimentos.Text = "Crear alimentos";
-            this.btnAlimentos.UseVisualStyleBackColor = true;
-            this.btnAlimentos.Click += new System.EventHandler(this.btnAlimentos_Click);
+            btnAlimentos.Location = new Point(51, 25);
+            btnAlimentos.Margin = new Padding(3, 4, 3, 4);
+            btnAlimentos.Name = "btnAlimentos";
+            btnAlimentos.Size = new Size(242, 82);
+            btnAlimentos.TabIndex = 0;
+            btnAlimentos.Text = "Crear alimentos";
+            btnAlimentos.UseVisualStyleBackColor = true;
+            btnAlimentos.Click += btnAlimentos_Click;
             // 
             // InicioView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlBotones);
-            this.Controls.Add(this.lblImagen);
-            this.Controls.Add(this.lblTitulo);
-            this.Name = "InicioView";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Zootopia";
-            this.pnlBotones.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(889, 562);
+            Controls.Add(pnlBotones);
+            Controls.Add(lblImagen);
+            Controls.Add(lblTitulo);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "InicioView";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Zootopia";
+            pnlBotones.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label lblImagen;
-        private System.Windows.Forms.Panel pnlBotones;
-        private System.Windows.Forms.Button btnAnimales;
-        private System.Windows.Forms.Button btnAlimentos;
-        private System.Windows.Forms.Button button1;
+        private Label lblTitulo;
+        private Label lblImagen;
+        private Panel pnlBotones;
+        private Button btnAnimales;
+        private Button btnAlimentos;
+        private Button button1;
     }
 }

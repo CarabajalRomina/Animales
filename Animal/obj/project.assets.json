@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\tpAnimales\\Animal\\animales.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Animal\\Animal\\animales.csproj",
       "projectName": "animales",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\tpAnimales\\Animal\\animales.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\Animal\\Animal\\animales.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\tpAnimales\\Animal\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\Animal\\Animal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

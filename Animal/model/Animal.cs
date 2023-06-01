@@ -10,34 +10,26 @@ namespace animales.model
 {
     internal abstract class Animal : IAnimal
     {
-        protected int[] position { get; set; } = new int[2];
-        protected int energy { get; set; } = 100;
-        protected string nameSpecie { get; set; }
-        protected float weight { get; set; }
-        protected int age { get; set; }
-        protected IDiet diet { get; set; }
+        protected int[] Position { get; set; } = new int[2];
+        protected int Energy { get; set; } = 100;
+        protected string NameSpecie { get; set; }
+        protected decimal Weight { get; set; }
+        protected int Age { get; set; }
+        protected IDiet Diet { get; set; }
+        
 
-        public Animal(string nameSpecie, float weigth, int age, IDiet diet)
+
+        public Animal(string nameSpecie, decimal weigth, int age, IDiet diet)
         {
-            this.position[0] = 0;
-            this.position[1] = 0;
-            this.nameSpecie = nameSpecie;
-            this.weight = weigth;
-            this.age = age;
-            this.energy = 100;
-            this.diet = diet;
-            int maxEnergy = 100;
-            int minEnergy = 0;
+            Position[0] = 0;
+            Position[1] = 0;
+            NameSpecie = nameSpecie;
+            Weight = weigth;
+            Age = age;
+            Diet = diet;
         }
 
-
-            
-
-        public abstract void Feed(IFood food);
-        public abstract int GetAge();
-        public abstract IDiet GetDiet();
-        public abstract string GetSpecie();
-        public abstract float GetWeight();
+        public abstract void Feed(IFood food);    
         public abstract bool Move(int x, int y);
         public abstract void Sleep();
     }
